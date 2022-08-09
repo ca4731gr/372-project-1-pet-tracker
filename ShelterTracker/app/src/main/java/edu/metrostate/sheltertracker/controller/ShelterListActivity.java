@@ -7,7 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.Space;
+import android.widget.TextView;
+
 import edu.metrostate.sheltertracker.R;
 import edu.metrostate.sheltertracker.domains.Shelter;
 import edu.metrostate.sheltertracker.domains.ShelterAdapter;
@@ -19,6 +25,13 @@ public class ShelterListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shelter_list);
+        findViewById(R.id.Export_json_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((ShelterTrackerApplication)getApplication()).exportAnimalList("JSON");
+            }
+        });
+
 
         ListView lv = findViewById(R.id.shelter_list);
 
@@ -28,11 +41,12 @@ public class ShelterListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Log.i("itemClick", String.valueOf(i));
-                Shelter shelter = ((ShelterTrackerApplication)getApplication()).getShelterList().get(i);
+                Shelter shelter = ((ShelterTrackerApplication) getApplication()).getShelterList().get(i);
                 Intent intent = new Intent(ShelterListActivity.this, ShelterActivity.class);
                 intent.putExtra("shelterId", shelter.getShelterId());
                 startActivity(intent);
             }
         });
+
     }
 }
