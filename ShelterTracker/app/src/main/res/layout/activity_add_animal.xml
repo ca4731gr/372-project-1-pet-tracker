@@ -5,7 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".controller.AddAnimalActivity">
+    <TextView
+        android:id="@+id/fileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAddAnimalTitle"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Input File Name"
+        android:textSize="16sp" />
+    />
 
+    <EditText
+        android:id="@+id/findFilename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fileName"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:hint="file.txt"
+        android:inputType="text"
+        android:minHeight="48dp" />
     <TextView
         android:id="@+id/tvAddAnimalTitle"
         android:layout_width="match_parent"
