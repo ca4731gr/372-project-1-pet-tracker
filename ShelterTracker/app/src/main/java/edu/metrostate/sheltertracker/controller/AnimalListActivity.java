@@ -33,7 +33,6 @@ public class AnimalListActivity extends AppCompatActivity {
                 Log.i("itemClick", String.valueOf(i));
                 Animal animal = ((ShelterTrackerApplication)getApplication()).getAnimalList().get(i);
                 Intent intent = new Intent(AnimalListActivity.this, AnimalActivity.class);
-                intent.putExtra("animalId", animal.getAnimalId());
                 startActivity(intent);
             }
         });
