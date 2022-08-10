@@ -1,14 +1,15 @@
 package edu.metrostate.sheltertracker.controller;
 import edu.metrostate.sheltertracker.R;
 import edu.metrostate.sheltertracker.domains.Animal;
+import edu.metrostate.sheltertracker.domains.AnimalAdapter;
 import edu.metrostate.sheltertracker.domains.Shelter;
 import edu.metrostate.sheltertracker.domains.ShelterTrackerApplication;
-import edu.metrostate.sheltertracker.domains.AnimalAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Button;

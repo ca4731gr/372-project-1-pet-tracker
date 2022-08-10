@@ -11,8 +11,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import edu.metrostate.sheltertracker.R;
+import edu.metrostate.sheltertracker.domains.AnimalAdapter;
 import edu.metrostate.sheltertracker.domains.Shelter;
-import edu.metrostate.sheltertracker.domains.ShelterAdapter;
 import edu.metrostate.sheltertracker.domains.ShelterTrackerApplication;
 
 public class ShelterActivity extends AppCompatActivity {

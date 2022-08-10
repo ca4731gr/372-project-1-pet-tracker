@@ -1,8 +1,18 @@
+package edu.metrostate.sheltertracker.domains;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.List;
 import edu.metrostate.sheltertracker.R;
+import edu.metrostate.sheltertracker.domains.Animal;
 
 public class AnimalAdapter extends ArrayAdapter<Animal> {
     public AnimalAdapter(Context context, List<Animal> animalList) {
@@ -21,7 +31,7 @@ public class AnimalAdapter extends ArrayAdapter<Animal> {
         TextView name = convertView.findViewById(R.id.animal_name);
 
         id.setText(getItem(position).getAnimalId());
-        name.setText(getItem(position).getAnimalName());
+        name.setText(getItem(position).getName());
 
         return convertView;
     }
